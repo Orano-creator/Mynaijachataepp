@@ -1,0 +1,81 @@
+
+payable contract Chat  =
+  
+    
+  record music = 
+    {
+    owner: address,
+    id : int,
+    message : string,
+    time : int
+    }
+
+  record game  =
+    {
+    gameowner: address,
+    gameid : int,
+    gamemessage : string,
+    gametimestamp : int 
+
+    }
+    
+  record state = {
+    musics : map(int, music),
+    games : map(int,game),
+
+    gamelength : int,
+
+    musiclength : int}
+    
+  entrypoint init() = { 
+    musics = {},
+    games = {},
+    musiclength = 0,
+    gamelength = 0 }
+  //returns lenght of chats in music group
+  entrypoint musicLength() : int = 
+    state.musiclength 
+//returns lenght of chats in game group
+  entrypoint gameLength() : int = 
+    state.gamelength 
+    
+    // gets chats inmusic group
+  entrypoint getMusic(index : int) = 
+    switch(Map.lookup(index, state.musics))
+      None => abort("music message doesnt exist")
+      Some(x) => x  
+
+    // gets chats in game groups
+  entrypoint getGame(index : int) = 
+    switch(Map.lookup(index, state.games))
+      None => abort("game message doesnt exist")
+      Some(x) => x  
+
+    // sends message to the music group
+  payable stateful entrypoint messageMusic(message' : string) = 
+    let time' = Chain.timestamp
+    let newMusic = {
+      id = musicLength()+1,
+      owner  = Call.caller,
+      message = message',
+      time = time'}
+    
+    let index = musicLength() + 1
+    put(state{musics[index] = newMusic, musiclength = index})
+
+    // sends message to the game group
+  payable stateful entrypoint messageGame(message' : string) = 
+    let timestamp = Chain.timestamp
+    let newGame = {
+      gameid = gameLength()+1,
+      gameowner  = Call.caller,
+      gamemessage = message',
+      gametimestamp = timestamp}
+    
+    let index = gameLength() + 1
+    put(state{games[index] = newGame, gamelength = index})
+    
+  
+    // to join a room
+  payable stateful entrypoint joinroom() = 
+    Chain.spend(Contract.address, 1000000)  

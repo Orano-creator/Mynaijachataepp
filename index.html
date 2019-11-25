@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="scroll.css">
+  <link rel="stylesheet" href="loading.css">
+  <title>Naija Chat</title>
+</head>
+<body>
+  <div id="scroll">
+
+      <div class="spinner"></div>
+
+  <!-- container & title -->
+  <div class="container my-4">
+    <h1 class="my-4 text-center">Naija Chat</h1>
+    <!-- buttons for chatrooms -->
+    <div class="chat-rooms mb-3 text-center">
+      <div class="my-2">Choose a chatroom:</div>
+      <!-- <button class="btn" id="general">#general</button> -->
+      <button class="btn" id="gameGroup">Games</button>
+      <button class="btn" id="musicGroup">Music</button>
+      <!-- <button class="btn" id="ninjas">#ninjas</button> -->
+    </div>
+    <!-- chat list / window -->
+    <div class="chat-window">
+      <ul class="chat-list list-group"></ul>
+    </div>
+    <!-- new chat form -->
+    
+ 
+    
+  </div>
+
+
+ 
+  
+  
+
+      <section id="gamesection" class="msger">
+  
+          <main class="msger-chat">
+            <div class="msg left-msg">
+              <div
+               class="msg-img"
+               style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+              ></div>
+        
+              <div class="msg-bubble">
+                <div class="msg-info">
+                  <div class="msg-info-name">GameBot</div>
+                  <div class="msg-info-time">12:45</div>
+                </div>
+        
+                <div class="msg-text">
+                  Hi, welcome to GameChat! Go ahead and send a message. 😄
+                </div>
+              </div>
+            </div>
+
+            
+        
+            <div class="msg right-msg">
+                <div id="game">
+
+                  </div>
+              
+        
+            </div>
+          </main>
+        
+          <div class="msger-inputarea" style="width: 100%;">
+            <input type="text" id="usermessage" class="msger-input" placeholder="Enter your message...">
+            <button id="sendGame" class="msger-send-btn">Send</button>
+          </div>
+        </section>
+
+
+
+
+
+
+    <section id="musicsection" class="msger">
+  
+        <main class="msger-chat">
+          <div class="msg left-msg">
+            <div
+             class="msg-img"
+             style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+            ></div>
+      
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">MusicBOT</div>
+                <div class="msg-info-time">12:45</div>
+              </div>
+      
+              <div class="msg-text">
+                Hi, welcome to music group! Go ahead and send me a message. 😄
+              </div>
+            </div>
+          </div>
+
+        
+              <div id="music" class="msg-text">
+
+                </div>
+
+                <div class="msger-inputarea" style="width: 100%;"> 
+                    <input id="musicmessage" type="text" class="msger-input" placeholder="Enter your message...">
+                    <button id="sendMusic"  class="msger-send-btn">Send</button>
+                  </div>
+          
+        </main>
+        
+      </section>
+    
+
+</div>
+
+
+
+  <script id="template" type="x-tmpl-mustache">
+    {{#gameChatArray}}
+<div>
+
+    <div class="msg-bubble">
+        {{message}} : {{owner}}
+      </div>
+      <div
+               class="msg-img"
+               style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"
+              ></div>
+  
+  
+  <!-- <p>{{timestamp}}</p> -->
+</div>
+
+
+
+{{/gameChatArray}}
+</script>
+
+
+<script id="templateMusic" type="x-tmpl-mustache">
+
+  
+    {{#musicChatArray}}
+    <div>
+
+        <div class="msg-bubble">
+            {{message}} : {{owner}}
+          </div>
+          <div
+                   class="msg-img"
+                   style="background-image: url(https://cdn1.iconfinder.com/data/icons/style-2-stock/807/iTunes-01.png)"
+                  ></div>
+      
+      
+      <!-- <p>{{timestamp}}</p> -->
+    </div>
+
+
+{{/musicChatArray}}
+</script>
+  
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
+  <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
+  <script src="js/index.js"></script>
+  
+
+</body>
+</html>
