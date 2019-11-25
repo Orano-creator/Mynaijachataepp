@@ -156,7 +156,7 @@ $("#gamesection").hide();
 $("#musicsection").hide();
 
 window.addEventListener('load', async () => {
-    $(".spinner").show();
+    $(".spinner").fadeIn();
 
     $("#gamesection").hide();
     $("#musicsection").hide();
@@ -200,7 +200,7 @@ window.addEventListener('load', async () => {
       })
   }
     
-    $('.spinner').fadeOut();
+    $('.spinner').fadeIn();
 });
 
 
@@ -219,7 +219,7 @@ $('#gameGroup').click(async function () {
 
     renderGame();
 
-    $('.spinner').fadeOut();
+    $('.spinner').fadeIn();
 
     console.log("SUCCESSFUL")
 
@@ -241,7 +241,7 @@ $('#musicGroup').click(async function () {
 
   renderMusic();
 
-  $('.spinner').fadeOut();
+  $('.spinner').fadeIn();
 
   console.log("Music room SUCCESSFUL")
 
@@ -271,7 +271,7 @@ $('#sendGame').click(async function () {
 
   renderGame();
 
-  $('.spinner').fadeOut();
+  $('.spinner').fadeIn();
 
   console.log("message sent ")
 
@@ -301,7 +301,7 @@ $('#sendMusic').click(async function () {
 
   renderMusic();
 
-  $('.spinner').fadeOut();
+  $('.spinner').fadeIn();
 
   console.log("message sent ")
 
