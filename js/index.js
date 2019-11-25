@@ -266,11 +266,13 @@ $('#sendGame').click(async function () {
     timestamp : Date(newmsg.gametimestamp)
   })
   console.log(newmsg.gameowner)
-  console.log(newmsg.gametimestamp)
+  console.log(newmsg.gametimestamp) 
+
+ 
 
 
   renderGame();
-
+  document.getElementById('usermessage').innerHTML = ""
   $('.spinner').fadeOut();
 
   console.log("message sent ")
@@ -299,7 +301,10 @@ $('#sendMusic').click(async function () {
   console.log(newmsg.time)
 
 
+
   renderMusic();
+
+  document.getElementById('musicmessage').innerHTML = ""
 
   $('.spinner').fadeOut();
 
