@@ -272,7 +272,7 @@ $('#sendGame').click(async function () {
 
 
   renderGame();
-  document.getElementById('usermessage').innerHTML = ""
+  document.getElementById('usermessage').value = ""
   $('.spinner').fadeOut();
 
   console.log("message sent ")
@@ -304,13 +304,10 @@ $('#sendMusic').click(async function () {
 
   renderMusic();
 
-  document.getElementById('musicmessage').innerHTML = ""
+  document.getElementById('musicmessage').value = ""
 
   $('.spinner').fadeOut();
 
   console.log("message sent ")
 
-  // document.getElementById("confirmation").innerHTML = " Reservation purchased Successfully"
-
-  // $.colorbox({html:"<h1>Reservation booked successfully</h1>"});
 });
