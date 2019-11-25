@@ -200,7 +200,7 @@ window.addEventListener('load', async () => {
       })
   }
     
-    $('.spinner').fadeIn();
+    $('.spinner').fadeOut();
 });
 
 
@@ -208,7 +208,7 @@ window.addEventListener('load', async () => {
 
 $('#gameGroup').click(async function () {
     console.log("Gaming clicked")
-    $(".spinner").show();
+    $(".spinner").fadeIn();
 
     await contractCall('joinroom', [], 1000)
     
@@ -219,7 +219,7 @@ $('#gameGroup').click(async function () {
 
     renderGame();
 
-    $('.spinner').fadeIn();
+    $('.spinner').fadeOut();
 
     console.log("SUCCESSFUL")
 
@@ -229,7 +229,7 @@ $('#gameGroup').click(async function () {
 
 $('#musicGroup').click(async function () {
   console.log("Music clicked")
-  $(".spinner").show();
+  $(".spinner").fadeIn();
 
   $("#gamesection").hide();
   $("#musicsection").show();
@@ -241,7 +241,7 @@ $('#musicGroup').click(async function () {
 
   renderMusic();
 
-  $('.spinner').fadeIn();
+  $('.spinner').fadeOut();
 
   console.log("Music room SUCCESSFUL")
 
@@ -251,7 +251,7 @@ $('#musicGroup').click(async function () {
 
 $('#sendGame').click(async function () {
   console.log("sending game message")
-  $(".spinner").show();
+  $(".spinner").fadeIn();
 
   var message  = ($('#usermessage').val())
   console.log(message)
@@ -271,7 +271,7 @@ $('#sendGame').click(async function () {
 
   renderGame();
 
-  $('.spinner').fadeIn();
+  $('.spinner').fadeOut();
 
   console.log("message sent ")
 
@@ -281,7 +281,7 @@ $('#sendGame').click(async function () {
 
 $('#sendMusic').click(async function () {
   console.log("sending music message")
-  $(".spinner").show();
+  $(".spinner").fadeIn();
 
   var message  = ($('#musicmessage').val())
   console.log(message)
@@ -301,7 +301,7 @@ $('#sendMusic').click(async function () {
 
   renderMusic();
 
-  $('.spinner').fadeIn();
+  $('.spinner').fadeOut();
 
   console.log("message sent ")
 
