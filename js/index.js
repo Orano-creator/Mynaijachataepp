@@ -156,7 +156,7 @@ $("#gamesection").hide();
 $("#musicsection").hide();
 
 window.addEventListener('load', async () => {
-    $(".spinner").show();
+    $(".spinner").fadeIn();
 
     $("#gamesection").hide();
     $("#musicsection").hide();
@@ -208,7 +208,7 @@ window.addEventListener('load', async () => {
 
 $('#gameGroup').click(async function () {
     console.log("Gaming clicked")
-    $(".spinner").show();
+    $(".spinner").fadeIn();
 
     await contractCall('joinroom', [], 1000)
     
@@ -229,7 +229,7 @@ $('#gameGroup').click(async function () {
 
 $('#musicGroup').click(async function () {
   console.log("Music clicked")
-  $(".spinner").show();
+  $(".spinner").fadeIn();
 
   $("#gamesection").hide();
   $("#musicsection").show();
@@ -251,7 +251,7 @@ $('#musicGroup').click(async function () {
 
 $('#sendGame').click(async function () {
   console.log("sending game message")
-  $(".spinner").show();
+  $(".spinner").fadeIn();
 
   var message  = ($('#usermessage').val())
   console.log(message)
@@ -266,11 +266,13 @@ $('#sendGame').click(async function () {
     timestamp : Date(newmsg.gametimestamp)
   })
   console.log(newmsg.gameowner)
-  console.log(newmsg.gametimestamp)
+  console.log(newmsg.gametimestamp) 
+
+ 
 
 
   renderGame();
-
+  document.getElementById('usermessage').value = ""
   $('.spinner').fadeOut();
 
   console.log("message sent ")
@@ -281,7 +283,7 @@ $('#sendGame').click(async function () {
 
 $('#sendMusic').click(async function () {
   console.log("sending music message")
-  $(".spinner").show();
+  $(".spinner").fadeIn();
 
   var message  = ($('#musicmessage').val())
   console.log(message)
@@ -299,13 +301,13 @@ $('#sendMusic').click(async function () {
   console.log(newmsg.time)
 
 
+
   renderMusic();
+
+  document.getElementById('musicmessage').value = ""
 
   $('.spinner').fadeOut();
 
   console.log("message sent ")
 
-  // document.getElementById("confirmation").innerHTML = " Reservation purchased Successfully"
-
-  // $.colorbox({html:"<h1>Reservation booked successfully</h1>"});
 });

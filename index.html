@@ -61,8 +61,13 @@
               </div>
             </div>
 
-            
-        
+            <!-- Send Button -->
+            <div class="msger-inputarea">
+              <input type="text" id="usermessage" class="msger-input" placeholder="Enter your message...">
+              <button id="sendGame" class="msger-send-btn">Send</button>
+            </div>
+
+            <!-- Mustache Game Div -->
             <div class="msg right-msg">
                 <div id="game">
 
@@ -72,10 +77,7 @@
             </div>
           </main>
         
-          <div class="msger-inputarea" style="width: 100%;">
-            <input type="text" id="usermessage" class="msger-input" placeholder="Enter your message...">
-            <button id="sendGame" class="msger-send-btn">Send</button>
-          </div>
+          
         </section>
 
 
@@ -104,15 +106,19 @@
             </div>
           </div>
 
-        
+
+            <!-- Send Button -->
+          <div class="msger-inputarea"> 
+            <input id="musicmessage" type="text" class="msger-input" placeholder="Enter your message...">
+            <button id="sendMusic"  class="msger-send-btn">Send</button>
+          </div>
+
+          <!-- Mustache Music Div -->
               <div id="music" class="msg-text">
 
                 </div>
 
-                <div class="msger-inputarea" style="width: 100%;"> 
-                    <input id="musicmessage" type="text" class="msger-input" placeholder="Enter your message...">
-                    <button id="sendMusic"  class="msger-send-btn">Send</button>
-                  </div>
+                
           
         </main>
         
@@ -122,7 +128,7 @@
 </div>
 
 
-
+<!-- Game Mustache script -->
   <script id="template" type="x-tmpl-mustache">
     {{#gameChatArray}}
 <div>
@@ -144,7 +150,7 @@
 {{/gameChatArray}}
 </script>
 
-
+<!-- Music Mustache Script -->
 <script id="templateMusic" type="x-tmpl-mustache">
 
   

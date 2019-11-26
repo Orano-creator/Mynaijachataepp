@@ -1,0 +1,5 @@
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Great course and tutorials on my project i created a chat aepp implementing the smart contract on the blockchain. it is divided into groups or chat rooms for discussing games and music utilizing the aeternity blockchain to aid anonymity of users on the forum and storage of discussions on the blockchain. To join the aepp users pay a fee in Ae tokens and they get access to chat on the aepp and chatrooms. This is built envisioning a chat aepp run on the aeternity blockchain. i call it naija chats you can call it Ae chats 😍😍. chat, discuss and have fun guys. feedbacks are welcomed. please use a good internet connection in testing so you don't say it's not working 😎😎 Enjoy.
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
