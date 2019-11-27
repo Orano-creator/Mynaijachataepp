@@ -30,15 +30,7 @@
       <ul class="chat-list list-group"></ul>
     </div>
     <!-- new chat form -->
-    
- 
-    
   </div>
-
-
- 
-  
-  
 
       <section id="gamesection" class="msger">
   
@@ -70,20 +62,10 @@
             <!-- Mustache Game Div -->
             <div class="msg right-msg">
                 <div id="game">
-
-                  </div>
-              
-        
+               </div>
             </div>
           </main>
-        
-          
         </section>
-
-
-
-
-
 
     <section id="musicsection" class="msger">
   
@@ -101,12 +83,11 @@
               </div>
       
               <div class="msg-text">
-                Hi, welcome to music group! Go ahead and send me a message. 😄
+                Hi, welcome to music group! Go ahead and send a message. 😄
               </div>
             </div>
           </div>
-
-
+          
             <!-- Send Button -->
           <div class="msger-inputarea"> 
             <input id="musicmessage" type="text" class="msger-input" placeholder="Enter your message...">
@@ -115,61 +96,36 @@
 
           <!-- Mustache Music Div -->
               <div id="music" class="msg-text">
-
-                </div>
-
-                
-          
+             </div> 
         </main>
-        
       </section>
-    
-
-</div>
+      </div>
 
 
-<!-- Game Mustache script -->
-  <script id="template" type="x-tmpl-mustache">
+  <!-- Game Mustache script -->
+   <script id="template" type="x-tmpl-mustache">
     {{#gameChatArray}}
-<div>
+   <div>
 
     <div class="msg-bubble">
         {{message}} : {{owner}}
       </div>
-      <div
-               class="msg-img"
-               style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"
-              ></div>
-  
-  
+      <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
   <!-- <p>{{timestamp}}</p> -->
 </div>
-
-
-
 {{/gameChatArray}}
 </script>
 
 <!-- Music Mustache Script -->
 <script id="templateMusic" type="x-tmpl-mustache">
-
-  
     {{#musicChatArray}}
     <div>
-
-        <div class="msg-bubble">
+    <div class="msg-bubble">
             {{message}} : {{owner}}
-          </div>
-          <div
-                   class="msg-img"
-                   style="background-image: url(https://cdn1.iconfinder.com/data/icons/style-2-stock/807/iTunes-01.png)"
-                  ></div>
-      
-      
+      </div>
+      <div class="msg-img" style="background-image: url(https://cdn1.iconfinder.com/data/icons/style-2-stock/807/iTunes-01.png)"></div>
       <!-- <p>{{timestamp}}</p> -->
     </div>
-
-
 {{/musicChatArray}}
 </script>
   
